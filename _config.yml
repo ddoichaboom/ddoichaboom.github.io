@@ -1,0 +1,30 @@
+title: 차호준 학습 기록
+description: 게임 클라이언트 프로그래머 준비 과정의 공부 정리와 진도
+theme: just-the-docs
+lang: ko-KR
+
+url: https://ddoichaboom.github.io
+baseurl: ""
+
+# 사이트 검색 (lunr.js)
+search_enabled: true
+search:
+  # 괄호 · 대괄호 · 쉼표 · 마침표 · 콜론 · 꺾쇠 · 가운뎃점에서도 단어를 나눈다
+  # 예: "포인터(unique_ptr)를" -> 포인터 / unique_ptr / 를, "std::vector<int>" -> std / vector / int
+  # 테마 기본값은 /[\s\-/]+/
+  tokenizer_separator: '/[\s\-/()\[\],.:;!?<>\u00B7]+/'
+
+# 모든 페이지에 테마 기본 레이아웃을 쓴다 (홈은 index.md에서 home으로 따로 지정)
+# 테마 자체 사이트의 _config.yml도 같은 방식이다
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# 빌드에서 뺄 저장소 관리 파일
+# Gemfile · Gemfile.lock · vendor 등은 Jekyll이 기본으로 뺀다
+exclude:
+  - README.md
+  - _정리_페이지_틀.md

@@ -1,0 +1,17 @@
+<button type="button" class="theme-toggle" id="theme-toggle" aria-label="라이트 모드와 다크 모드 바꾸기"></button>
+<script>
+  (function () {
+    var btn = document.getElementById('theme-toggle');
+    function isDark() { return jtd.getTheme() === 'dark'; }
+    function render() {
+      btn.textContent = isDark() ? '☀ 라이트 모드' : '☾ 다크 모드';
+    }
+    render();
+    btn.addEventListener('click', function () {
+      var next = isDark() ? 'light' : 'dark';
+      jtd.setTheme(next);
+      try { localStorage.setItem('jtd-theme', next); } catch (e) {}
+      render();
+    });
+  })();
+</script>

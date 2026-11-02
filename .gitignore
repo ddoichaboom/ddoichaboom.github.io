@@ -1,0 +1,9 @@
+# Jekyll 빌드 결과 · 캐시 (Just the Docs 템플릿과 같은 항목)
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler가 만드는 폴더
+.bundle/
+vendor/
